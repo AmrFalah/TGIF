@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      
+      <div class="row">
+
+        <div class="col-9"><img src="./Free_Sample_By_Wix.jpeg" />
+        </div>
+      <div class = "email">
+      <a href="mailto:info@tgif.net"> 
+       
+        info@tgif.net</a>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="dropdown">
+              <div class="row">
+                <div class="col-1">
+                  <a href="./home.html" class="home"> home</a>
+                </div>
+                <div class="col-3">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                    >congress 113</a
+                  >
+                  <div class="dropdown-menu">
+                    <a href="./congressmen-house.html" class="dropdown-item">house</a>
+                    <a href="./congressmen-senate.html" class="dropdown-item">Senate</a>
+                  </div>
+                </div>
+                <div class="col-3">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                      >Attendence</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="./Attendence-House.html" class="dropdown-item">house</a>
+                      <a href="./Attendence-Senate.html" class="dropdown-item">Senate</a>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                        >Party Loyality</a
+                      >
+                      <div class="dropdown-menu">
+                        <a href="./party-House.html" class="dropdown-item">house</a>
+                        <a href="./Party-Senate.html" class="dropdown-item">Senate</a>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+
+      <!--Table container-->
+      <div>
+            <h2>Party Loyalty</h2>
+            <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+    	    
+            <h2>Senate at a glance</h2>
+            <div class="container">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>party</th>
+                    <th>No. of reps</th>
+                    <th>% voted w/ party</th>
+                  </tr>
+                </thead>
+                <tbody id="Attendence-data"></tbody>
+              </table>
+  
+              <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>No party votes</th>
+                      <th> % Party Votes </th>
+  
+                    </tr>
+                  </thead>
+                  <tbody id="Party-min"></tbody>
+                </table>
+  
+  
+  
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>No party votes</th>
+                          <th> % Party Votes </th>
+                      </tr>
+                    </thead>
+                    <tbody id="Party-max"></tbody>
+                  </table>
+            </div>
+            </div>
+  
+            <footer class="page-footer font-small teal pt-4">
+              <div class="footer-copyright text-center py-3">
+                © 2018 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/">
+                  MDBootstrap.com</a
+                >
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+  
+      <script src="./house.js"></script>
+      <script src="./Party.js"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"
+      ></script>
+      <script src="./jquery.dataTables.min.js"></script>
+    </body>
+  </html>
+  

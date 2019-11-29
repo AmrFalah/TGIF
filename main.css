@@ -1,0 +1,124 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+.logo-email {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar {
+  border: 1px solid #000;
+  background: rgba(204, 188, 188, 0.945);
+}
+.headerSen {
+  font-style: Marker Felt, fantasy;
+}
+.page-footer {
+  border: 1px solid #000;
+  background: rgba(204, 188, 188, 0.945);
+}
+.email {
+  display: flex;
+}
+
+body > div:nth-child(2) > footer > div > a {
+  color: grey;
+}
+.email {
+  margin-top: 150px;
+}
+.custom-control {
+  display: flex;
+}
+.row1 {
+  display: felx;
+  justify-content: space-around;
+}
+
+.checkwrapperBox {
+  display: flex;
+}
+.checkwrapper {
+  display: flex;
+  font-size: 15px;
+}
+
+.droplistFilter {
+  display: flex;
+}
+.filters {
+  display: flex;
+  justify-content: space-between;
+}
+
+body > div > div.container > div.filters.row > div.droplistFilter > p {
+  margin-right: 0.5em;
+  font-size: 15px;
+}
+body > div > div.container > div.filters.row > div.checkwrapper > p {
+  margin-left: 0.5em;
+}
+.checkbox {
+  margin-left: 0.8em;
+}
+body
+  > div
+  > div.container
+  > div.filters.row
+  > div.checkwrapper
+  > div
+  > div:nth-child(1)
+  > label
+  > input[type="checkbox"] {
+  margin-right: 0.2em;
+}
+
+body
+  > div
+  > div.container
+  > div.filters.row
+  > div.checkwrapper
+  > div
+  > div:nth-child(2)
+  > label
+  > input[type="checkbox"] {
+  margin-right: 0.2em;
+}
+body
+  > div
+  > div.container
+  > div.filters.row
+  > div.checkwrapper
+  > div
+  > div:nth-child(3)
+  > label
+  > input[type="checkbox"] {
+  margin-right: 0.2em;
+}
+
+body > div > div.container > div.filters.row > div.droplistFilter > p {
+  margin-left: 1em;
+}
+.droplistFilter {
+  display: flex;
+  justify-content: space-around;
+}
+#more {
+  display: none;
+}
+.page-footer {
+  margin: 5%;
+  margin-bottom: 1%;
+}
+
+body > div > div.container > div.navbar > div > div > div:nth-child(2) > a {
+  padding-left: 10px;
+}
+.navbar {
+  font-size: 13px;
+}
+#messageNoMember {
+  text-align: center;
+  background-color: rgba(204, 188, 188);
+}
