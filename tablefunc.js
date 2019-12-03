@@ -2,22 +2,6 @@ var table = document.getElementById("senate-data");
 var checks = document.querySelectorAll("input[type=checkbox]");
 var dropValue = document.querySelector("select");
 
-function myFunction1() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-  }
-}
-
 // beginning:
 // function that gets all unique states and create a dropdown
 // addEventListeners to checkboxes and dropdown
@@ -37,10 +21,6 @@ function init() {
       filterByParty();
     });
   }
-
-  createTable(data.results[0].members);
-
-  buildDropdown();
 }
 init();
 function createTable(arrayOfMembers) {
@@ -131,8 +111,6 @@ function buildDropdown() {
 function filterByParty() {
   var filteredMembers = [];
   if (!checks[0].checked && !checks[1].checked && !checks[2].checked) {
-    console.log("in if");
-
     filterByState(data.results[0].members);
   } else {
     for (var i = 0; i < data.results[0].members.length; i++) {
@@ -168,4 +146,8 @@ function filterByState(filteredMembers) {
     }
     createTable(filteredByState);
   }
+}
+
+function non() {
+  document.getElementById("loader").style.display = "none";
 }

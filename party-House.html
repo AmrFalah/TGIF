@@ -53,7 +53,7 @@
                         >Party Loyality</a
                       >
                       <div class="dropdown-menu">
-                        <a href="./party-House.html" class="dropdown-item">house</a>
+                        <a href="./Party-House.html" class="dropdown-item">house</a>
                         <a href="./Party-Senate.html" class="dropdown-item">Senate</a>
                       </div>
                     </div>
@@ -67,7 +67,13 @@
             <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
     	    
             <h2>Senate at a glance</h2>
+
+          <div id="loader">
+              <img src="./Spinner-1s-200px.gif" alt="loading..." srcset="" />
+            </div>
             <div class="container">
+                <h3>top loyal 10%</h3>
+
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -79,6 +85,8 @@
                 <tbody id="Attendence-data"></tbody>
               </table>
   
+              <h3>less loyal 10%</h3>
+
               <table class="table table-striped">
                   <thead>
                     <tr>
@@ -107,19 +115,19 @@
             </div>
   
             <footer class="page-footer font-small teal pt-4">
-              <div class="footer-copyright text-center py-3">
-                © 2018 Copyright:
-                <a href="https://mdbootstrap.com/education/bootstrap/">
-                  MDBootstrap.com</a
-                >
+                <div class="footer-copyright text-center py-3">
+                    © 2019 Copyright:
+                    <a href="https://mdbootstrap.com/education/bootstrap/">
+                      All rights reserved </a
+                    >
               </div>
             </footer>
           </div>
         </div>
       </div>
-  
-      <script src="./house.js"></script>
       <script src="./Party.js"></script>
+
+      <script src="./senateandparty.js"></script>
       <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

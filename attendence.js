@@ -1,5 +1,3 @@
-console.log(data.results[0].members);
-
 var statistics = {
   numDem: 0,
   numRep: 0,
@@ -108,7 +106,6 @@ function getTotals() {
   totalrow.append(Total1, Total2, Total3);
   table.append(totalrow);
 }
-getTotals();
 
 function getTenPer() {
   data.results[0].members.sort(function(a, b) {
@@ -282,6 +279,7 @@ function getLastTenPer() {
     break;
   }
 }
-getTenPer();
 
-getLastTenPer();
+function non() {
+  document.getElementById("loader").style.display = "none";
+}

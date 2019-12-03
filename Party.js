@@ -1,10 +1,7 @@
-console.log(data.results[0].members);
-
 var statistics = {
   numDem: 0,
   numRep: 0,
   numInd: 0,
-  totalNum: 0,
   perOfD: 0,
   perOfR: 0,
   perOfI: 0,
@@ -13,23 +10,27 @@ var statistics = {
 
 var table = document.getElementById("Attendence-data");
 
-function getTotals() {
-  for (var j = 0; j < data.results[0].members.length; j++) {
-    if (data.results[0].members[j].party == "D") {
-      var totalNumDem = statistics.numDem++;
-      statistics.perOfD += data.results[0].members[j].votes_with_party_pct;
-    } else if (data.results[0].members[j].party == "R") {
+function getTotals(data) {
+  console.log(data);
+
+  for (var j = 0; j < data.length; j++) {
+    if (data[j].party == "D") {
+      statistics.numDem++;
+      statistics.perOfD += data[j].votes_with_party_pct;
+    } else if (data[j].party == "R") {
       statistics.numRep++;
-      statistics.perOfR += data.results[0].members[j].votes_with_party_pct;
+      statistics.perOfR += data[j].votes_with_party_pct;
     } else {
       statistics.numInd++;
-      statistics.perOfI += data.results[0].members[j].votes_with_party_pct;
+      statistics.perOfI += data[j].votes_with_party_pct;
     }
   }
 
   var AvgOfD = statistics.perOfD / statistics.numDem;
   var AvgOfR = statistics.perOfR / statistics.numRep;
   var AvgOfI = statistics.perOfI / statistics.numInd;
+  console.log(AvgOfD);
+  console.log(AvgOfR);
   console.log(AvgOfI);
 
   var rowAtt1 = document.createElement("tr");
@@ -44,7 +45,6 @@ function getTotals() {
   } else {
     row1.innerHTML = AvgOfD;
   }
-  console.log(row1);
 
   var row2 = document.createElement("td");
   row2.innerHTML = statistics.numDem;
@@ -88,26 +88,28 @@ function getTotals() {
   console.log(row8);
   rowAtt3.append(row6, row8, row7);
   table.append(rowAtt1, rowAtt2, rowAtt3);
+
   var totalrow = document.createElement("tr");
   var Total1 = document.createElement("td");
   Total1.innerHTML = "Total";
   var Total2 = document.createElement("td");
-
   Total2.innerHTML = statistics.numDem + statistics.numInd + statistics.numRep;
   var Total3 = document.createElement("td");
-  if (statistics.numDem == 0) {
-    Total3.innerHTML = AvgOfI + AvgOfR / 2;
-  } else if (statistics.numRep == 0) {
-    Total3.innerHTML = AvgOfI + AvgOfD / 2;
-  } else if (statistics.numInd == 0) {
-    Total3.innerHTML = AvgOfD + AvgOfR / 2;
-  } else {
-    Total3.innerHTML = (AvgOfI + AvgOfD + AvgOfR) / 3;
-  }
+  // if (statistics.numDem == 0) {
+  //   Total3.innerHTML = AvgOfI + AvgOfR / 2;
+  // } else if (statistics.numRep == 0) {
+  //   Total3.innerHTML = AvgOfI + AvgOfD / 2;
+  // } else if (statistics.numInd == 0) {
+  //   Total3.innerHTML = AvgOfD + AvgOfR / 2;
+  // } else {
+  //   Total3.innerHTML = (AvgOfI + AvgOfD + AvgOfR) / 3;
+  // }
+  Total3.innerHTML =
+    (statistics.perOfD + statistics.perOfI + statistics.perOfR) / data.length;
+
   totalrow.append(Total1, Total2, Total3);
   table.append(totalrow);
 }
-getTotals();
 
 function getTenPer() {
   data.results[0].members.sort(function(a, b) {
@@ -290,6 +292,6 @@ function getLastTenPer() {
     break;
   }
 }
-getTenPer();
-
-getLastTenPer();
+function non() {
+  document.getElementById("loader").style.display = "none";
+}
