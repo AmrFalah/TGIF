@@ -148,3 +148,21 @@ body > div > div.container > div.navbar > div > div > div:nth-child(2) > a {
     visibility: hidden;
   }
 }
+
+.welcome {
+  padding-left: 30%;
+  padding-top: 30px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+body > div > div:nth-child(2) > div.filters.row {
+  margin-left: 1px;
+}

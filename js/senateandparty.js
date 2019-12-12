@@ -35,11 +35,12 @@ fetch(`https://api.propublica.org/congress/v1/113/${url}/members.json`, {
       document.URL.includes("Party")
     ) {
       non();
-      getTotals(members);
-      getTenPer(members);
-      getLastTenPer(members);
+      populateStatistics(members);
+      getMost(members);
+      getLeast(members);
     } else if (document.URL.includes("Index")) {
       non();
       myFunction1();
     }
   });
+//
